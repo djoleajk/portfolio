@@ -1,0 +1,467 @@
+/* Osnovni stilovi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Custom stilovi preko Bootstrap-a */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+}
+
+/* Navigacija */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Hero Sekcija */
+.hero {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0d6efd;
+}
+
+/* Hero image styling */
+.hero-image-container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-image {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border: 8px solid white;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-image-bg {
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+    border-radius: 30px;
+    transform: rotate(-5deg);
+    top: 20px;
+    left: calc(50% - 190px);
+    z-index: 1;
+}
+
+/* Tech stack icons */
+.tech-stack {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    padding-top: 2rem;
+}
+
+.tech-icon {
+    color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.tech-icon:hover {
+    color: #0d6efd;
+    transform: translateY(-5px);
+}
+
+/* Experience badge */
+.experience-badge {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 3;
+}
+
+.badge-circle {
+    width: 120px;
+    height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    animation: float 3s ease-in-out infinite;
+}
+
+.badge-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #0d6efd;
+    line-height: 1;
+}
+
+.badge-subtext {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Hero content animations */
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* O Meni Sekcija */
+.about {
+    padding: 5rem 2rem;
+}
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    background: #f0f0f0;
+    height: 10px;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+.progress {
+    background: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Projekti Sekcija */
+.projects {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+}
+
+.project-filters {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.filter-btn {
+    border: none;
+    background: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.filter-btn.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+/* Kontakt Sekcija */
+.contact {
+    padding: 5rem 2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.form-group textarea ~ label {
+    top: 1rem;
+    transform: none;
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.8rem;
+    background: white;
+    padding: 0 0.5rem;
+    color: #007bff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007bff;
+}
+
+button[type="submit"] {
+    background: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #333;
+    color: white;
+}
+
+/* Hero sekcija */
+.bg-gradient {
+    background: linear-gradient(135deg, var(--primary-color), #0dcaf0);
+    color: white;
+    padding-top: 120px;
+}
+
+.profile-img {
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Progress bars */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Cards */
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+}
+
+/* Social icons */
+.fab, .fas {
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+.fab:hover, .fas:hover {
+    color: var(--secondary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+    }
+
+    .hero {
+        padding: 2rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .bg-gradient {
+        padding-top: 80px;
+    }
+    
+    .profile-img {
+        max-width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .hero {
+        padding-top: 80px;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-image-bg {
+        width: 300px;
+        height: 300px;
+        left: calc(50% - 150px);
+    }
+
+    .experience-badge {
+        right: 20px;
+        bottom: 20px;
+    }
+
+    .badge-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .badge-text {
+        font-size: 1.2rem;
+    }
+
+    .badge-subtext {
+        font-size: 0.8rem;
+    }
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.btn-outline-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.2);
+} 
