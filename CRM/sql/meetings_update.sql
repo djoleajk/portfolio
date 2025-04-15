@@ -1,0 +1,2 @@
+ALTER TABLE meetings
+ADD COLUMN meeting_date DATETIME NOT NULL;
