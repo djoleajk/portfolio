@@ -1,0 +1,16 @@
+/* ...existing code... */
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem 0;
+}
+
+.tech-stack span {
+	background-color: #f0f0f0;
+	padding: 0.25rem 0.75rem;
+	border-radius: 15px;
+	font-size: 0.9rem;
+	color: #333;
+}
+/* ...existing code... */

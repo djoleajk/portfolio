@@ -1,0 +1,17 @@
+.card {
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.display-4 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	text-align: center;
+}
+
+#rezultat {
+	font-size: 1.2rem;
+}
+
+#sekcijaTajmera {
+	text-align: center;
+}
