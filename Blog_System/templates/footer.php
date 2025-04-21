@@ -1,9 +1,9 @@
-    </div><!-- /.container -->
+</div><!-- /.container -->
 
     <footer class="footer">
         <div class="container">
             <div class="text-center">
-                <p>&copy; <?php echo date('Y'); ?> Simple PHP CMS. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?> Simple PHP CMS. All rights reserved - Agencija Sprint</p>
             </div>
         </div>
     </footer>
@@ -59,4 +59,4 @@
         });
     </script>
 </body>
-</html> 
+</html>

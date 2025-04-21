@@ -125,9 +125,9 @@ switch ($action) {
     case 'list':
     default:
         $stmt = $pdo->query("SELECT s.*, c.name as client_name 
-                            FROM sales s 
-                            LEFT JOIN clients c ON s.client_id = c.id 
-                            ORDER BY s.sale_date DESC");
+                             FROM sales s 
+                             LEFT JOIN clients c ON s.client_id = c.id 
+                             ORDER BY s.sale_date DESC");
         $sales = $stmt->fetchAll();
         ?>
         <h2>Prodaja</h2>
