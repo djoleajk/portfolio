@@ -342,7 +342,7 @@
 								<h5 class="card-title">Time Calculator</h5>
 								<p class="card-text">
 									Kalkulator za računanje vremena sa opcijama za izračunavanje
-									unapred i unazad, plus funkcionalnost alarma.
+									plus funkcionalnost alarma.
 								</p>
 								<div class="d-flex gap-2 mb-3">
 									<span class="badge bg-primary">HTML</span>
@@ -351,6 +351,32 @@
 								</div>
 								<a
 									href="time-calculator/index.html"
+									class="btn btn-outline-primary w-100"
+									target="_blank"
+									>Pogledaj Projekat</a
+								>
+							</div>
+						</div>
+					</div>
+
+					<!-- Site Analytics Project -->
+					<div class="col-md-6 col-lg-4">
+						<div class="card h-100 border-0 shadow-sm">
+							<div class="card-body">
+								<h5 class="card-title">Site Analytics</h5>
+								<p class="card-text">
+									Interaktivna kontrolna tabla za praćenje web analitike sa
+									prikazom statistike posetilaca, ponašanja korisnika i izvora
+									saobraćaja.
+								</p>
+								<div class="d-flex gap-2 mb-3">
+									<span class="badge bg-primary">PHP</span>
+									<span class="badge bg-secondary">MySQL</span>
+									<span class="badge bg-info">JavaScript</span>
+									<span class="badge bg-warning">Chart.js</span>
+								</div>
+								<a
+									href="site-analytics/websites.php"
 									class="btn btn-outline-primary w-100"
 									target="_blank"
 									>Pogledaj Projekat</a
@@ -427,7 +453,8 @@
 			<div class="container text-center">
 				<p class="mb-0">
 					🚀 Napravljeno sa puno entuzijazma i ☕ | &copy;
-					<span id="currentYear"></span> Đorđe Živanović. Sva prava zaštićena.
+					<span id="currentYear"></span> Đorđe Živanović. Sva prava zaštićena. |
+					All rights reserved - Agencija Sprint
 				</p>
 			</div>
 		</footer>
@@ -435,8 +462,9 @@
 		<!-- Dodajemo JavaScript pre zatvaranja body taga -->
 		<script>
 			// Automatsko ažuriranje godine u footer-u
-			document.getElementById("currentYear").textContent =
-				new Date().getFullYear();
+			const year = new Date().getFullYear();
+			document.getElementById("currentYear").textContent = year;
+			document.getElementById("currentYear2").textContent = year;
 		</script>
 
 		<!-- Bootstrap JS -->

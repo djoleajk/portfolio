@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Analytics Test Page</title>
+		<!-- Analytics Configuration -->
+		<script>
+			window.analyticsConfig = {
+				websiteId: 1, // Promenite ovo na vaš website_id
+				apiKey: "test123api", // Promenite ovo na vaš API ključ
+			};
+		</script>
+		<script src="tracker.js"></script>
+	</head>
+	<body>
+		<h1>Test Analytics Page</h1>
+
+		<!-- Test Links -->
+		<div>
+			<a href="page1.html">Test Link 1</a>
+			<a href="page2.html">Test Link 2</a>
+		</div>
+
+		<!-- Stats Display -->
+		<div id="stats"></div>
+
+		<script>
+			// Provera da li tracking radi
+			fetch("api/stats.php?website_id=1")
+				.then((res) => res.json())
+				.then((stats) => {
+					document.getElementById("stats").innerHTML = `
+                    <h3>Tracking Status:</h3>
+                    <p>Visits Today: ${stats.today}</p>
+                    <p>Total Visits: ${stats.total}</p>
+                `;
+				});
+		</script>
+	</body>
+</html>
