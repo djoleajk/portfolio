@@ -1,0 +1,286 @@
+body {
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.player-container {
+    width: 320px;
+    background: linear-gradient(to bottom, #0c1824, #1a2834);
+    border: 1px solid #234;
+    border-radius: 5px;
+    color: #89a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.player-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    background: linear-gradient(to bottom, #1c2834, #0c1824);
+    border-bottom: 1px solid #234;
+}
+
+.player-main {
+    padding: 10px;
+}
+
+.control-section {
+    border-bottom: 1px solid #234;
+    padding-bottom: 10px;
+}
+
+.progress-bar {
+    height: 5px;
+    background: #123;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.progress {
+    height: 100%;
+    width: 30%;
+    background: #0af;
+}
+
+.control-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 0;
+}
+
+.ctrl-btn {
+    background: transparent;
+    border: none;
+    color: #89a;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.ctrl-btn:hover {
+    color: #0af;
+}
+
+.playlist {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.playlist-header {
+    padding: 5px;
+    color: #89a;
+    border-bottom: 1px solid #234;
+}
+
+.playlist-item {
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #123;
+}
+
+.playlist-item:hover {
+    background: #234;
+    color: #0af;
+}
+
+.playlist-item.active {
+    background-color: #234;
+    color: #0af;
+    border-left: 2px solid #0af;
+}
+
+.playlist-item.selected {
+    background-color: #345;
+}
+
+.player-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background: linear-gradient(to bottom, #0c1824, #1c2834);
+    border-top: 1px solid #234;
+}
+
+.footer-btn {
+    background: transparent;
+    border: none;
+    color: #89a;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.footer-btn:hover {
+    color: #0af;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #123;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #345;
+}
+
+.eq-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #0c1824, #1a2834);
+    border: 1px solid #234;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.eq-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.eq-slider {
+    -webkit-appearance: slider-vertical;
+    height: 100px;
+}
+
+.stream-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.dialog-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to bottom, #0c1824, #1a2834);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #234;
+}
+
+.dialog-content input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    background: #123;
+    border: 1px solid #234;
+    color: #89a;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.dialog-buttons button {
+    padding: 5px 15px;
+    background: #234;
+    border: none;
+    color: #89a;
+    cursor: pointer;
+}
+
+.dialog-buttons button:hover {
+    background: #345;
+    color: #0af;
+}
+
+.track-details, .options-menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.context-menu {
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    border-radius: 4px;
+    padding: 5px 0;
+    z-index: 1000;
+}
+
+.menu-item {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background: #f0f0f0;
+}
+
+.now-playing {
+    text-align: center;
+    padding: 5px;
+    background: #2c3e50;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.track-info {
+    color: #ecf0f1;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.volume-icon {
+    margin-right: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#volume {
+    width: 100px;
+    height: 5px;
+    -webkit-appearance: none;
+    background: #4a5568;
+    border-radius: 2px;
+    outline: none;
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+}
+
+#volume::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+    border: none;
+}
