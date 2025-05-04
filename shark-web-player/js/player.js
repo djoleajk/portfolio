@@ -191,7 +191,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function makeItemSelectable(element) {
-        element.addEventListener('click', () => {
+        let mouseDownTime = 0;
+        
+        element.addEventListener('mousedown', () => {
+            mouseDownTime = Date.now();
+        });
+
+        element.addEventListener('mouseup', (e) => {
+            const clickDuration = Date.now() - mouseDownTime;
+            
+            // If click was held for less than 200ms, consider it a click
+            if (clickDuration < 200) {
+                const index = Array.from(playlist.children).indexOf(element) - 1;
+                currentTrackIndex = index;
+                playTrack(index);
+            }
+
             // Remove selection from other items
             playlist.querySelectorAll('.playlist-item').forEach(item => {
                 item.classList.remove('selected');
@@ -199,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
             element.classList.add('selected');
         });
 
-        // Add context menu
+        // Keep the context menu functionality
         element.addEventListener('contextmenu', (e) => {
             e.preventDefault();
             
