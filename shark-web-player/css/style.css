@@ -3,6 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1a1a1a;
 }
 
 .player-container {
@@ -12,6 +17,12 @@ body {
     border-radius: 5px;
     color: #89a;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #2a2a2a;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
 .player-header {
@@ -283,4 +294,23 @@ body {
     background: #3498db;
     cursor: pointer;
     border: none;
+}
+
+/* Mobile Specific Styles */
+@media screen and (max-width: 768px) {
+    .player-container {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .control-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .volume-control {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
