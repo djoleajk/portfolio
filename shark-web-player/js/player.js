@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { name: "TDI Domacica", url: "https://streaming.tdiradio.com/domacica.mp3" },
         { name: "NAXI CAFE", url: "https://naxidigital-cafe128ssl.streaming.rs:8022/;*.mp3" },
         { name: "TDI HOUSE", url: "https://streaming.tdiradio.com/houseclassics.mp3" },
-        { name: "Lola Radio", url: "https://streaming.tdiradio.com/radiolola" },
+        { name: "LOLA RADIO", url: "https://streaming.tdiradio.com/radiolola" },
         { name: "RED", url: "https://stream.redradio.rs/sid=1" }
     ];
 
