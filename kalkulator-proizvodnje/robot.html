@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presa Robot - Kalkulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Nazad na meni</a>
+        
+        <h1>Presa "Robot"</h1>
+        <p class="subtitle">Izračunaj vreme završetka serije</p>
+        
+        <div class="current-time">
+            <div class="time-label">Trenutno vreme:</div>
+            <div id="currentTime" class="time-display">--:--:--</div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="timePerPiece">Vreme po komadu (sekunde):</label>
+                <input type="number" id="timePerPiece" min="1" placeholder="npr. 25">
+            </div>
+
+            <div class="input-group">
+                <label for="numberOfPieces">Broj komada:</label>
+                <input type="number" id="numberOfPieces" min="1" placeholder="npr. 50">
+            </div>
+
+            <button id="calculateBtn" class="btn-calculate">Izračunaj</button>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="result-card">
+                <div class="result-label">Početak rada</div>
+                <div id="startTime" class="result-value">--:--:--</div>
+            </div>
+
+            <div class="result-card highlight">
+                <div class="result-label">Ukupno trajanje</div>
+                <div id="totalDuration" class="result-value">-- min -- sek</div>
+            </div>
+
+            <div class="result-card success">
+                <div class="result-label">Završetak rada</div>
+                <div id="endTime" class="result-value">--:--:--</div>
+            </div>
+
+            <div class="result-card info">
+                <div class="result-label">Ukupno komada</div>
+                <div id="totalPieces" class="result-value">--</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

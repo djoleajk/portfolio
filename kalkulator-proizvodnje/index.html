@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrijski Kalkulator Proizvodnje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container menu-container">
+        <h1>Industrijski Kalkulator</h1>
+        <p class="subtitle">Izaberi operaciju za kalkulaciju vremena</p>
+        
+        <div class="current-time">
+            <div class="time-label">Trenutno vreme:</div>
+            <div id="currentTime" class="time-display">--:--:--</div>
+        </div>
+
+        <div class="menu-grid">
+            <a href="zatvaranje-mine.html" class="menu-card">
+                <div class="menu-icon">🔧</div>
+                <div class="menu-title">Zatvaranje Mine</div>
+                <div class="menu-description">Kalkulacija vremena za zatvaranje</div>
+            </a>
+
+            <a href="ubadanje.html" class="menu-card">
+                <div class="menu-icon">⚡</div>
+                <div class="menu-title">Ubadanje</div>
+                <div class="menu-description">Kalkulacija vremena za ubadanje</div>
+            </a>
+
+            <a href="peskarenje.html" class="menu-card special">
+                <div class="menu-icon">💨</div>
+                <div class="menu-title">Peskarenje</div>
+                <div class="menu-description">2 mine odjednom</div>
+            </a>
+
+            <a href="robot.html" class="menu-card">
+                <div class="menu-icon">🤖</div>
+                <div class="menu-title">Presa "Robot"</div>
+                <div class="menu-description">Kalkulacija za Robot presu</div>
+            </a>
+
+            <a href="italijanka.html" class="menu-card">
+                <div class="menu-icon">🇮🇹</div>
+                <div class="menu-title">Presa "Italijanka"</div>
+                <div class="menu-description">Kalkulacija za Italijanku</div>
+            </a>
+
+            <a href="bem.html" class="menu-card">
+                <div class="menu-icon">⚙️</div>
+                <div class="menu-title">Presa "BEM"</div>
+                <div class="menu-description">Kalkulacija za BEM presu</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Ažuriranje trenutnog vremena
+        function updateCurrentTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('sr-RS', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+            document.getElementById('currentTime').textContent = timeString;
+        }
+
+        updateCurrentTime();
+        setInterval(updateCurrentTime, 1000);
+    </script>
+</body>
+</html>
