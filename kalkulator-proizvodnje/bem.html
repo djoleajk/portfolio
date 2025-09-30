@@ -29,6 +29,12 @@
                 <input type="number" id="numberOfPieces" min="1" placeholder="npr. 50">
             </div>
 
+            <div class="input-group bem-special">
+                <label for="startTimeInput">Početak rada (opcionalno):</label>
+                <input type="time" id="startTimeInput" class="time-input">
+                <small class="input-note">⚠️ Ostavi prazno za trenutno vreme ili unesi kada indukcija bude spremna</small>
+            </div>
+
             <button id="calculateBtn" class="btn-calculate">Izračunaj</button>
         </div>
 
@@ -55,6 +61,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="bem.js"></script>
 </body>
 </html>

@@ -281,6 +281,28 @@ input[type="number"]:focus {
     font-style: italic;
 }
 
+.time-input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.time-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.bem-special {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe4b3 50%);
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px dashed #ffa500;
+}
+
 .special-card {
     background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
     border-color: #fdcb6e;
