@@ -13,6 +13,12 @@
         <h1>Presa "Robot"</h1>
         <p class="subtitle">Izračunaj vreme završetka serije</p>
         
+        <div class="dedication-banner">
+            <div class="gift-text">
+                Poklon kolegama <strong>Kovačkog Centra</strong> od <span class="gift-author">Đorđe Živanović</span>
+            </div>
+        </div>
+        
         <div class="current-time">
             <div class="time-label">Trenutno vreme:</div>
             <div id="currentTime" class="time-display">--:--:--</div>
@@ -27,6 +33,12 @@
             <div class="input-group">
                 <label for="numberOfPieces">Broj komada:</label>
                 <input type="number" id="numberOfPieces" min="1" placeholder="npr. 50">
+            </div>
+
+            <div class="input-group bem-special">
+                <label for="startTimeInput">Početak rada (opcionalno):</label>
+                <input type="time" id="startTimeInput" class="time-input">
+                <small class="input-note">⚠️ Ostavi prazno za trenutno vreme ili unesi planirano vreme početka</small>
             </div>
 
             <button id="calculateBtn" class="btn-calculate">Izračunaj</button>
@@ -55,6 +67,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="robot.js"></script>
 </body>
 </html>

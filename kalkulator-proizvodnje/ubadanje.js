@@ -46,20 +46,20 @@ function createDateFromTime(timeString) {
     return customDate;
 }
 
-// Glavna kalkulacija za peskarenje (2 mine odjednom)
+// Glavna kalkulacija
 function calculate() {
-    const timePerCycle = parseInt(document.getElementById('timePerCycle').value);
-    const numberOfMines = parseInt(document.getElementById('numberOfMines').value);
+    const timePerPiece = parseInt(document.getElementById('timePerPiece').value);
+    const numberOfPieces = parseInt(document.getElementById('numberOfPieces').value);
     const startTimeInput = document.getElementById('startTimeInput').value;
 
     // Validacija unosa
-    if (!timePerCycle || timePerCycle <= 0) {
-        alert('Molimo unesite validno vreme po ciklusu!');
+    if (!timePerPiece || timePerPiece <= 0) {
+        alert('Molimo unesite validno vreme po komadu!');
         return;
     }
 
-    if (!numberOfMines || numberOfMines <= 0) {
-        alert('Molimo unesite validan broj mina!');
+    if (!numberOfPieces || numberOfPieces <= 0) {
+        alert('Molimo unesite validan broj komada!');
         return;
     }
 
@@ -73,17 +73,15 @@ function calculate() {
         startTime = new Date();
     }
 
-    // Kalkulacija - deli broj mina sa 2 jer se rade po 2 odjednom
-    const numberOfCycles = Math.ceil(numberOfMines / 2); // Zaokruži na veći broj ako je neparan broj
-    const totalSeconds = timePerCycle * numberOfCycles;
+    // Kalkulacija
+    const totalSeconds = timePerPiece * numberOfPieces;
     const endTime = new Date(startTime.getTime() + totalSeconds * 1000);
 
     // Prikaz rezultata
     document.getElementById('startTime').textContent = formatTime(startTime);
     document.getElementById('totalDuration').textContent = formatDuration(totalSeconds);
     document.getElementById('endTime').textContent = formatTime(endTime);
-    document.getElementById('totalCycles').textContent = numberOfCycles + ' ciklusa';
-    document.getElementById('totalMines').textContent = numberOfMines + ' mina';
+    document.getElementById('totalPieces').textContent = numberOfPieces + ' kom';
 
     // Prikaži rezultate
     document.getElementById('results').classList.remove('hidden');
@@ -93,13 +91,13 @@ function calculate() {
 document.getElementById('calculateBtn').addEventListener('click', calculate);
 
 // Enter key za brži unos
-document.getElementById('timePerCycle').addEventListener('keypress', function(e) {
+document.getElementById('timePerPiece').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
-        document.getElementById('numberOfMines').focus();
+        document.getElementById('numberOfPieces').focus();
     }
 });
 
-document.getElementById('numberOfMines').addEventListener('keypress', function(e) {
+document.getElementById('numberOfPieces').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         document.getElementById('startTimeInput').focus();
     }
