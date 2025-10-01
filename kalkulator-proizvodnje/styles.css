@@ -211,7 +211,6 @@ input[type="number"]:focus {
     font-family: 'Courier New', monospace;
 }
 
-/* Menu Styles */
 .menu-container {
     max-width: 900px;
 }
@@ -267,7 +266,6 @@ input[type="number"]:focus {
     font-size: 0.95em;
 }
 
-/* Special styling for peskarenje */
 .special-subtitle {
     color: #ff8c00;
     font-weight: 600;
@@ -303,7 +301,6 @@ input[type="number"]:focus {
     border: 2px dashed #ffa500;
 }
 
-/* Gift dedication styling */
 .dedication-banner {
     text-align: center;
     margin: 20px 0 30px 0;
@@ -348,7 +345,6 @@ input[type="number"]:focus {
     display: none;
 }
 
-/* Results grid for peskarenje (5 cards) */
 .results:has(.special-card) {
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
@@ -382,7 +378,6 @@ input[type="number"]:focus {
         font-size: 1.2em;
     }
 
-    /* Dedication banner responsive */
     .dedication-banner {
         margin: 15px 0 25px 0;
     }

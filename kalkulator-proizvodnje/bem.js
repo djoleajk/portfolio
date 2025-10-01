@@ -1,4 +1,3 @@
-// Ažuriranje trenutnog vremena
 function updateCurrentTime() {
     const now = new Date();
     const timeString = now.toLocaleTimeString('sr-RS', { 
@@ -9,7 +8,6 @@ function updateCurrentTime() {
     document.getElementById('currentTime').textContent = timeString;
 }
 
-// Formatiranje vremena
 function formatTime(date) {
     return date.toLocaleTimeString('sr-RS', { 
         hour: '2-digit', 
@@ -18,7 +16,6 @@ function formatTime(date) {
     });
 }
 
-// Formatiranje trajanja
 function formatDuration(seconds) {
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -33,7 +30,6 @@ function formatDuration(seconds) {
     }
 }
 
-// Kreiranje datuma od unetog vremena
 function createDateFromTime(timeString) {
     const now = new Date();
     const [hours, minutes] = timeString.split(':');
@@ -46,13 +42,11 @@ function createDateFromTime(timeString) {
     return customDate;
 }
 
-// Glavna kalkulacija za BEM presu
 function calculate() {
     const timePerPiece = parseInt(document.getElementById('timePerPiece').value);
     const numberOfPieces = parseInt(document.getElementById('numberOfPieces').value);
     const startTimeInput = document.getElementById('startTimeInput').value;
 
-    // Validacija unosa
     if (!timePerPiece || timePerPiece <= 0) {
         alert('Molimo unesite validno vreme po komadu!');
         return;
@@ -63,34 +57,26 @@ function calculate() {
         return;
     }
 
-    // Određivanje početnog vremena
     let startTime;
     if (startTimeInput) {
-        // Koristi uneto vreme
         startTime = createDateFromTime(startTimeInput);
     } else {
-        // Koristi trenutno vreme
         startTime = new Date();
     }
 
-    // Kalkulacija
     const totalSeconds = timePerPiece * numberOfPieces;
     const endTime = new Date(startTime.getTime() + totalSeconds * 1000);
 
-    // Prikaz rezultata
     document.getElementById('startTime').textContent = formatTime(startTime);
     document.getElementById('totalDuration').textContent = formatDuration(totalSeconds);
     document.getElementById('endTime').textContent = formatTime(endTime);
     document.getElementById('totalPieces').textContent = numberOfPieces + ' kom';
 
-    // Prikaži rezultate
     document.getElementById('results').classList.remove('hidden');
 }
 
-// Event listeners
 document.getElementById('calculateBtn').addEventListener('click', calculate);
 
-// Enter key za brži unos
 document.getElementById('timePerPiece').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         document.getElementById('numberOfPieces').focus();
@@ -109,6 +95,5 @@ document.getElementById('startTimeInput').addEventListener('keypress', function(
     }
 });
 
-// Pokreni sat
 updateCurrentTime();
 setInterval(updateCurrentTime, 1000);
