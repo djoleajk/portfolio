@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peskarenje - Kalkulator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Nazad na meni</a>
+        
+        <h1>Peskarenje</h1>
+        <p class="subtitle special-subtitle">⚠️ Radi 2 mine odjednom</p>
+        
+        <div class="dedication-banner">
+            <div class="gift-text">
+                Poklon kolegama <strong>Kovačkog Centra</strong>
+            </div>
+        </div>
+        
+        <div class="current-time">
+            <div class="time-label">Trenutno vreme:</div>
+            <div id="currentTime" class="time-display">--:--:--</div>
+        </div>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="timePerCycle">Vreme po ciklusu (sekunde):</label>
+                <input type="number" id="timePerCycle" min="1" placeholder="npr. 30">
+                <small class="input-note">Vreme za obradu 2 mine odjednom</small>
+            </div>
+
+            <div class="input-group">
+                <label for="numberOfMines">Ukupan broj mina:</label>
+                <input type="number" id="numberOfMines" min="1" placeholder="npr. 100">
+                <small class="input-note">Broj će se automatski podeliti sa 2</small>
+            </div>
+
+            <div class="input-group bem-special">
+                <label for="startTimeInput">Početak rada (opcionalno):</label>
+                <input type="time" id="startTimeInput" class="time-input">
+                <small class="input-note">⚠️ Ostavi prazno za trenutno vreme ili unesi planirano vreme početka</small>
+            </div>
+
+            <button id="calculateBtn" class="btn-calculate">Izračunaj</button>
+        </div>
+
+        <div id="results" class="results hidden">
+            <div class="result-card">
+                <div class="result-label">Početak rada</div>
+                <div id="startTime" class="result-value">--:--:--</div>
+            </div>
+
+            <div class="result-card highlight">
+                <div class="result-label">Ukupno trajanje</div>
+                <div id="totalDuration" class="result-value">-- min -- sek</div>
+            </div>
+
+            <div class="result-card success">
+                <div class="result-label">Završetak rada</div>
+                <div id="endTime" class="result-value">--:--:--</div>
+            </div>
+
+            <div class="result-card info">
+                <div class="result-label">Broj ciklusa</div>
+                <div id="totalCycles" class="result-value">--</div>
+            </div>
+
+            <div class="result-card special-card">
+                <div class="result-label">Ukupno mina</div>
+                <div id="totalMines" class="result-value">--</div>
+            </div>
+        </div>
+        
+        <div class="author-footer">
+            <p>© 2025 Đorđe Živanović. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="peskarenje.js"></script>
+</body>
+</html>

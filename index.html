@@ -1,585 +1,84 @@
 <!DOCTYPE html>
 <html lang="sr">
-	<head>
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=width=device-width, initial-scale=1.0"
-		/>
-		<title>Djordje Zivanovic | PHP Developer Portfolio</title>
-		<!-- Bootstrap CSS -->
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-		/>
-		<!-- Font Awesome -->
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-		/>
-		<!-- Custom CSS -->
-		<link rel="stylesheet" href="style.css" />
-		<script type="module" src="js/audio-memory.js"></script>
-	</head>
-	<body data-bs-spy="scroll" data-bs-target="#mainNav">
-		<!-- Navigacija -->
-		<nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container">
-				<a class="navbar-brand fw-bold text-primary" href="#home">
-					<i class="fab fa-php"></i> PHP Developer
-				</a>
-				<button
-					class="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNav"
-				>
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<ul class="navbar-nav ms-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="#home">Početna</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#about">O meni</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#projects">Projekti</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#contact">Kontakt</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrijski Kalkulator Proizvodnje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container menu-container">
+        <h1>Industrijski Kalkulator</h1>
+        <p class="subtitle">Izaberi operaciju za kalkulaciju vremena</p>
+        
+        <div class="dedication-banner">
+            <div class="gift-text">
+                Poklon kolegama <strong>Kovačkog Centra</strong>
+            </div>
+        </div>
+        
+        <div class="current-time">
+            <div class="time-label">Trenutno vreme:</div>
+            <div id="currentTime" class="time-display">--:--:--</div>
+        </div>
 
-		<!-- Hero Sekcija -->
-		<section id="home" class="hero min-vh-100 d-flex align-items-center">
-			<div class="container">
-				<div class="row align-items-center">
-					<div class="col-lg-6 text-center text-lg-start hero-content">
-						<div class="animate-text">
-							<span class="badge bg-primary mb-3 px-3 py-2">PHP Developer</span>
-							<h1 class="display-4 fw-bold mb-4">
-								Zdravo 👋<br />Ja sam <span class="gradient-text">Đorđe</span>
-							</h1>
-							<p class="lead mb-4 text-secondary">
-								Strastveni PHP developer fokusiran na kreiranje modernih web
-								aplikacija. Kombinujem tehničku stručnost sa kreativnim
-								rešenjima.
-							</p>
-							<div
-								class="d-flex gap-3 justify-content-center justify-content-lg-start"
-							>
-								<a href="#projects" class="btn btn-primary btn-lg">
-									<i class="fas fa-code me-2"></i>Moji Projekti
-								</a>
-								<a href="#contact" class="btn btn-outline-primary btn-lg">
-									<i class="fas fa-envelope me-2"></i>Kontaktiraj Me
-								</a>
-							</div>
-							<div class="mt-5 tech-stack">
-								<p class="text-uppercase fw-bold text-secondary small mb-3">
-									Tehnologije sa kojima radim
-								</p>
-								<div
-									class="d-flex gap-4 justify-content-center justify-content-lg-start align-items-center"
-								>
-									<i class="fab fa-php fa-2x tech-icon"></i>
-									<i class="fab fa-laravel fa-2x tech-icon"></i>
-									<i class="fab fa-html5 fa-2x tech-icon"></i>
-									<i class="fab fa-css3-alt fa-2x tech-icon"></i>
-									<i class="fab fa-js fa-2x tech-icon"></i>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 text-center mt-5 mt-lg-0 position-relative">
-						<div class="hero-image-container">
-							<div class="hero-image-bg"></div>
-							<img
-								src="djordje Zivanovic.jpg"
-								alt="Đorđe Živanović"
-								class="hero-image"
-							/>
-						</div>
-						<div class="experience-badge">
-							<span class="badge-circle">
-								<span class="badge-text">PHP</span>
-								<span class="badge-subtext">Developer</span>
-							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+        <div class="menu-grid">
+            <a href="ubadanje.html" class="menu-card">
+                <div class="menu-icon">🔨</div>
+                <div class="menu-title">Ubadanje</div>
+                <div class="menu-description">Kalkulacija vremena za ubadanje</div>
+            </a>
 
-		<!-- O Meni Sekcija -->
-		<section id="about" class="py-5">
-			<div class="container">
-				<h2 class="text-center display-5 mb-5">O Meni</h2>
-				<div class="row g-4">
-					<div class="col-lg-6">
-						<div class="card border-0 shadow-sm h-100">
-							<div class="card-body">
-								<h3 class="card-title mb-4">Moja Priča</h3>
-								<p class="card-text">
-									Sa velikim entuzijazmom ulazim u svet web developmenta! 💻 Kao
-									PHP Junior Developer, svaki dan je nova prilika za učenje i
-									napredak.
-								</p>
-								<h4 class="mt-4 mb-3">Trenutni Fokus:</h4>
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item">
-										
-🎯 Razvoj modernih web aplikacija sa PHP i Laravel-om
-									</li>
-									<li class="list-group-item">
-										📚 Kontinuirano učenje najboljih praksi
-									</li>
-									<li class="list-group-item">
-										
-🤝 Saradnja na open-source projektima
-									</li>
-									<li class="list-group-item">
-										🔍 Unapređenje znanja o web security-u
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6">
-						<div class="card border-0 shadow-sm h-100">
-							<div class="card-body">
-								<h3 class="card-title mb-4">Tehničke Veštine</h3>
-								<div class="mb-4">
-									<div class="d-flex justify-content-between mb-1">
-										<span>PHP</span>
-										<span>75%</span>
-									</div>
-									<div class="progress">
-										<div
-											class="progress-bar"
-											role="progressbar"
-											style="width: 75%"
-										></div>
-									</div>
-								</div>
-								<div class="mb-4">
-									<div class="d-flex justify-content-between mb-1">
-										<span>Laravel</span>
-										<span>65%</span>
-									</div>
-									<div class="progress">
-										<div
-											class="progress-bar"
-											role="progressbar"
-											style="width: 65%"
-										></div>
-									</div>
-								</div>
-								<div class="mb-4">
-									<div class="d-flex justify-content-between mb-1">
-										<span>MySQL</span>
-										<span>70%</span>
-									</div>
-									<div class="progress">
-										<div
-											class="progress-bar"
-											role="progressbar"
-											style="width: 70%"
-										></div>
-									</div>
-								</div>
-								<div class="mb-4">
-									<div class="d-flex justify-content-between mb-1">
-										<span>HTML & CSS</span>
-										<span>85%</span>
-									</div>
-									<div class="progress">
-										<div
-											class="progress-bar"
-											role="progressbar"
-											style="width: 85%"
-										></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+            <a href="zatvaranje-mine.html" class="menu-card">
+                <div class="menu-icon">🔩</div>
+                <div class="menu-title">Zatvaranje Mine</div>
+                <div class="menu-description">Kalkulacija vremena za zatvaranje</div>
+            </a>
 
-		<!-- Projekti Sekcija -->
-		<section id="projects" class="py-5 bg-light">
-			<div class="container">
-				<h2 class="text-center display-5 mb-5">Moji Projekti</h2>
-				<div class="row g-4">
-					<!-- Blog System Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Blog System</h5>
-								<p class="card-text">
-									Dinamički blog sistem kreiran u PHP-u sa admin panelom i
-									korisničkim rolama.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-								</div>
-								<a
-									href="Blog_System/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
+            <a href="peskarenje.html" class="menu-card special">
+                <div class="menu-icon">💨</div>
+                <div class="menu-title">Peskarenje</div>
+                <div class="menu-description">2 mine odjednom</div>
+            </a>
 
-					<!-- Todo List Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Todo Lista</h5>
-								<p class="card-text">
-									Aplikacija za upravljanje zadacima sa osnovnim CRUD
-									operacijama.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-								</div>
-								<a
-									href="todo/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
+            <a href="robot.html" class="menu-card">
+                <div class="menu-icon">🤖</div>
+                <div class="menu-title">Presa "Robot"</div>
+                <div class="menu-description">Kalkulacija za Robot presu</div>
+            </a>
 
-					<!-- Reservation System Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Sistem za Rezervacije</h5>
-								<p class="card-text">
-									Sistem za upravljanje rezervacijama sa opcijama za korisnike i
-									administratore.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-								</div>
-								<a
-									href="Sistem_za_rezervacije/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-								>
-									Pogledaj Projekat
-								</a>
-							</div>
-						</div>
-					</div>
+            <a href="italijanka.html" class="menu-card">
+                <div class="menu-icon">🇮🇹</div>
+                <div class="menu-title">Presa "Italijanka"</div>
+                <div class="menu-description">Kalkulacija za Italijanku</div>
+            </a>
 
-					<!-- CRM System Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">CRM Sistem</h5>
-								<p class="card-text">
-									Sistem za upravljanje odnosima sa klijentima sa modulima za
-									kontakte, sastanke i prodaju.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-								</div>
-								<a
-									href="CRM/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
+            <a href="bem.html" class="menu-card">
+                <div class="menu-icon">⚙️</div>
+                <div class="menu-title">Presa "BEM"</div>
+                <div class="menu-description">Kalkulacija za BEM presu</div>
+            </a>
+        </div>
+        
+        <div class="author-footer">
+            <p>© 2025 Đorđe Živanović. All rights reserved.</p>
+        </div>
+    </div>
 
-					<!-- Services Platform Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Platforma za Usluge</h5>
-								<p class="card-text">
-									Online platforma za povezivanje pružaoca usluga sa klijentima.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-								</div>
-								<a
-									href="services-platform/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
+    <script>
+        // Ažuriranje trenutnog vremena
+        function updateCurrentTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('sr-RS', { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit' 
+            });
+            document.getElementById('currentTime').textContent = timeString;
+        }
 
-					<!-- Time Calculator Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Time Calculator</h5>
-								<p class="card-text">
-									Kalkulator za računanje vremena sa opcijama za izračunavanje
-									plus funkcionalnost alarma.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">HTML</span>
-									<span class="badge bg-info">JavaScript</span>
-									<span class="badge bg-secondary">CSS</span>
-								</div>
-								<a
-									href="time-calculator/index.html"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
-
-					<!-- Univerzalni Kalkulator Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Univerzalni Kalkulator</h5>
-								<p class="card-text">
-									Sveobuhvatna kalkulator aplikacija: osnovni, naučni, konverter jedinica, finansijski i geometrijski kalkulator.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">HTML</span>
-									<span class="badge bg-info">JavaScript</span>
-									<span class="badge bg-secondary">CSS</span>
-								</div>
-								<a
-									href="Univerzalni Kalkulator/index.html"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
-
-					<!-- Filmovi Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Filmovi</h5>
-								<p class="card-text">
-									Web aplikacija za streaming filmova sa video player-om koji
-									podržava više streaming servisa.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-									
-								</div>
-								<a
-									href="Filmovi/index.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
-
-					<!-- Site Analytics Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Site Analytics</h5>
-								<p class="card-text">
-									Interaktivna kontrolna tabla za praćenje web analitike sa
-									prikazom statistike posetilaca.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">JavaScript</span>
-									
-								</div>
-								<a
-									href="site-analytics/websites.php"
-									class="btn btn-outline-primary w-100"
-									target="_blank"
-									>Pogledaj Projekat</a
-								>
-							</div>
-						</div>
-					</div>
-
-					<!-- Pravoslavni Kalendar Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Pravoslavni Kalendar</h5>
-								<p class="card-text">
-									Digitalni pravoslavni kalendar sa pregledom praznika, postova i svetaca za svaki dan u godini.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">PHP</span>
-									<span class="badge bg-secondary">MySQL</span>
-									<span class="badge bg-info">Bootstrap</span>
-									
-								</div>
-								<a href="pravoslavni-kalendar/index.php" class="btn btn-outline-primary w-100" target="_blank">
-									Pogledaj Projekat
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Shark Web Player Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Shark Web Player</h5>
-								<p class="card-text">
-									Online muzički player napravljen koristeći HTML5, CSS3 i JavaScript. Omogućava reprodukciju muzike, kreiranje playlist-a i osnovne kontrole za reprodukciju.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">HTML</span>
-									<span class="badge bg-info">JavaScript</span>
-									<span class="badge bg-secondary">CSS</span>
-								</div>
-								<a href="shark-web-player/index.html" class="btn btn-outline-primary w-100" target="_blank">
-									Pogledaj Projekat
-								</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Industrijski Kalkulator Proizvodnje Project -->
-					<div class="col-md-6 col-lg-4">
-						<div class="card h-100 border-0 shadow-sm">
-							<div class="card-body">
-								<h5 class="card-title">Industrijski Kalkulator Proizvodnje</h5>
-								<p class="card-text">
-									Kalkulator za produkciju sa više operacija: zatvaranje mine, ubadanje, peskarenje, prese Robot, Italijanka i BEM. Kalkulacija vremena završetka rada.
-								</p>
-								<div class="d-flex gap-2 mb-3">
-									<span class="badge bg-primary">HTML</span>
-									<span class="badge bg-info">JavaScript</span>
-									<span class="badge bg-secondary">CSS</span>
-								</div>
-								<a href="kalkulator-proizvodnje/index.html" class="btn btn-outline-primary w-100" target="_blank">
-									Pogledaj Projekat
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Kontakt Sekcija -->
-		<section id="contact" class="py-5">
-			<div class="container">
-				<h2 class="text-center display-5 mb-5">Hajde da Sarađujemo!</h2>
-				<div class="row justify-content-center">
-					<div class="col-lg-8">
-						<div class="card border-0 shadow-sm">
-							<div class="card-body p-5">
-								<form>
-									<div class="mb-4">
-										<label for="name" class="form-label">Vaše Ime</label>
-										<input
-											type="text"
-											class="form-control"
-											id="name"
-											required
-										/>
-									</div>
-									<div class="mb-4">
-										<label for="email" class="form-label">Email Adresa</label>
-										<input
-											type="email"
-											class="form-control"
-											id="email"
-											required
-										/>
-									</div>
-									<div class="mb-4">
-										<label for="message" class="form-label">Vaša Poruka</label>
-										<textarea
-											class="form-control"
-											id="message"
-											rows="5"
-											required
-										></textarea>
-									</div>
-									<button type="submit" class="btn btn-primary btn-lg w-100">
-										Pošalji Poruku ✉️
-									</button>
-								</form>
-							</div>
-						</div>
-						<div class="text-center mt-4">
-							<div class="d-flex justify-content-center gap-4">
-								<a href="#" class="text-decoration-none">
-									<i class="fab fa-github fa-2x"></i>
-								</a>
-								<a href="#" class="text-decoration-none">
-									<i class="fab fa-linkedin fa-2x"></i>
-								</a>
-								<a href="#" class="text-decoration-none">
-									<i class="fas fa-envelope fa-2x"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Footer sekcija -->
-		<footer class="bg-dark text-white py-4">
-			<div class="container text-center">
-				<p class="mb-0">
-					🚀 Napravljeno sa puno entuzijazma i ☕ | &copy;
-					<span id="currentYear"></span> Đorđe Živanović. Sva prava zaštićena. |
-					All rights reserved - Agencija Sprint
-				</p>
-			</div>
-		</footer>
-
-		<!-- Dodajemo JavaScript pre zatvaranja body taga -->
-		<script>
-			// Automatsko ažuriranje godine u footer-u
-			const year = new Date().getFullYear();
-			document.getElementById("currentYear").textContent = year;
-			document.getElementById("currentYear2").textContent = year;
-		</script>
-
-		<!-- Bootstrap JS -->
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-	</body>
+        updateCurrentTime();
+        setInterval(updateCurrentTime, 1000);
+    </script>
+</body>
 </html>
-
