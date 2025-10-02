@@ -325,6 +325,19 @@ input[type="number"]:focus {
     color: #666;
 }
 
+.author-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.author-footer p {
+    color: #888;
+    font-size: 0.9em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -385,5 +398,14 @@ input[type="number"]:focus {
     .dedication-banner .gift-text {
         font-size: 0.8em;
         line-height: 1.5;
+    }
+
+    .author-footer {
+        margin-top: 30px;
+        padding-top: 20px;
+    }
+
+    .author-footer p {
+        font-size: 0.8em;
     }
 }
